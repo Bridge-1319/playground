@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int     @id @default(autoincrement())
+  name        String
+  email       String
+  isAdmin     Boolean
+  largeNumber BigInt
+  preferences Json
+  blog        Bytes
+}
+
+model Post {
+  // rating Decimal // more precision
+  // rating Float
+  // createdAt DateTime @default(now())
+  // updatedAt DateTime @updatedAt
+  id Int @id @default(autoincrement())
+}
+
+// name type field typeModfier @attribute
+
+// one database must be used
+// npx prisma format
+// define model
+// npx prisma migrate dev --name init
+// npx prisma generate
+// npx prisma studio
+// npx prisma migrate dev --name add-user

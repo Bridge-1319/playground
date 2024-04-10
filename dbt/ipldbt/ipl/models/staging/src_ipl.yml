@@ -1,0 +1,11 @@
+sources:
+  - name: ipl
+    database: raw
+    schema: ipl
+    tables:
+      - name: ball_by_ball
+      - name: match
+      - name: player_match
+      - name: player
+      - name: season 
+      - name: team

@@ -1,0 +1,1 @@
+1. dbt seed | Make sure csv files are in seed folder

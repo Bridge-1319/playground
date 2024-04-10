@@ -1,0 +1,33 @@
+demo:
+  target: demo1
+  outputs:
+    demo1:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server' # (The ODBC Driver installed on your system)
+      server: LAPTOP-RKFE274I
+      database: demo
+      schema: finance
+      windows_login: True
+      trust_cert: True
+      # user:
+      # password:
+
+    demo2:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server' # (The ODBC Driver installed on your system)
+      server: LAPTOP-RKFE274I
+      database: demo
+      schema: dbo
+      windows_login: True
+      trust_cert: True
+      
+    demo3:
+      type: sqlserver
+      driver: 'ODBC Driver 18 for SQL Server' # (The ODBC Driver installed on your system)
+      server: LAPTOP-RKFE274I
+      database: industry
+      schema: dbo
+      windows_login: True
+      trust_cert: True
+
+    
